@@ -11,7 +11,7 @@
                   <Client>
                     <ID>{{et_mid}}</ID>
                 </Client>
-            <CustomerKey>SMSMessageTracking Data View</CustomerKey>
+            <CustomerKey>SMSMessageTracking</CustomerKey>
             <Name>MobileMessageTrackingID</Name>
             <Description>Mimics the SMSMessageTracking Data View</Description>
             <IsSendable>false</IsSendable>
