@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <s:Header>
+        <a:Action s:mustUnderstand="1">Create</a:Action>
+        <a:To s:mustUnderstand="1">https://{{et_subdomain}}.soap.marketingcloudapis.com/Service.asmx</a:To>
+        <fueloauth xmlns="http://exacttarget.com">{{dne_etAccessToken}}</fueloauth>
+  </s:Header>
+   <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CreateRequest xmlns="http://exacttarget.com/wsdl/partnerAPI">
+        <Objects xsi:type="DataExtension">
+                  <Client>
+                    <ID>{{et_mid}}</ID>
+                </Client>
+            <CustomerKey>SMSMessageTracking Data View</CustomerKey>
+            <Name>MobileMessageTrackingID</Name>
+            <Description>Mimics the SMSMessageTracking Data View</Description>
+            <IsSendable>false</IsSendable>
+            <IsTestable>false</IsTestable>
+           <Fields>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>MobileMessageTrackingID</CustomerKey>
+                    <Name>MobileMessageTrackingID</Name>
+                    <Label>MobileMessageTrackingID</Label>
+                    <IsRequired>true</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                    <Field xsi:type="DataExtensionField">
+                    <CustomerKey>EID</CustomerKey>
+                    <Name>EID</Name>
+                    <Label>EID</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>Mobile</CustomerKey>
+                    <Name>Mobile</Name>
+                    <Label>Mobile</Label>
+                    <IsRequired>true</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Phone</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>MessageID</CustomerKey>
+                    <Name>MessageID</Name>
+                    <Label>MessageID</Label>
+                    <IsRequired>true</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>KeywordID</CustomerKey>
+                    <Name>KeywordID</Name>
+                    <Label>KeywordID</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Text</FieldType>
+                    <MaxLength>36</MaxLength>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>CodeID</CustomerKey>
+                    <Name>CodeID</Name>
+                    <Label>CodeID</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Text</FieldType>
+                    <MaxLength>36</MaxLength>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>ConversationID</CustomerKey>
+                    <Name>ConversationID</Name>
+                    <Label>ConversationID</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Text</FieldType>
+                    <MaxLength>36</MaxLength>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>CampaignID</CustomerKey>
+                    <Name>CampaignID</Name>
+                    <Label>CampaignID</Label>
+                    <IsRequired>true</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>Sent</CustomerKey>
+                    <Name>Sent</Name>
+                    <Label>Sent</Label>
+                    <IsRequired>true</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Boolean</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>Delivered</CustomerKey>
+                    <Name>Delivered</Name>
+                    <Label>Delivered</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Boolean</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>Undelivered</CustomerKey>
+                    <Name>Undelivered</Name>
+                    <Label>Undelivered</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Boolean</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>Unsub</CustomerKey>
+                    <Name>Unsub</Name>
+                    <Label>Unsub</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>OptIn</CustomerKey>
+                    <Name>OptIn</Name>
+                    <Label>OptIn</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Boolean</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>OptOut</CustomerKey>
+                    <Name>OptOut</Name>
+                    <Label>OptOut</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Boolean</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>Outbound</CustomerKey>
+                    <Name>Outbound</Name>
+                    <Label>Outbound</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Boolean</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>Inbound</CustomerKey>
+                    <Name>Inbound</Name>
+                    <Label>Inbound</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Boolean</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>CreateDateTime</CustomerKey>
+                    <Name>CreateDateTime</Name>
+                    <Label>CreateDateTime</Label>
+                    <IsRequired>true</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Date</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>ModifiedDateTime</CustomerKey>
+                    <Name>ModifiedDateTime</Name>
+                    <Label>ModifiedDateTime</Label>
+                    <IsRequired>true</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Date</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>ActionDateTime</CustomerKey>
+                    <Name>ActionDateTime</Name>
+                    <Label>ActionDateTime</Label>
+                    <IsRequired>true</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Date</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>MessageText</CustomerKey>
+                    <Name>MessageText</Name>
+                    <Label>MessageText</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Text</FieldType>
+                    <MaxLength>160</MaxLength>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>IsTest</CustomerKey>
+                    <Name>IsTest</Name>
+                    <Label>IsTest</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Boolean</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>MobileMessageRecurrenceID</CustomerKey>
+                    <Name>MobileMessageRecurrenceID</Name>
+                    <Label>MobileMessageRecurrenceID</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>ResponseToMobileMessageTrackingID</CustomerKey>
+                    <Name>ResponseToMobileMessageTrackingID</Name>
+                    <Label>ResponseToMobileMessageTrackingID</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>IsValid</CustomerKey>
+                    <Name>IsValid</Name>
+                    <Label>IsValid</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Boolean</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>InvalidationCode</CustomerKey>
+                    <Name>InvalidationCode</Name>
+                    <Label>InvalidationCode</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>SendID</CustomerKey>
+                    <Name>SendID</Name>
+                    <Label>SendID</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>SendSplitID</CustomerKey>
+                    <Name>SendSplitID</Name>
+                    <Label>SendSplitID</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>SendSegmentID</CustomerKey>
+                    <Name>SendSegmentID</Name>
+                    <Label>SendSegmentID</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>SendJobID</CustomerKey>
+                    <Name>SendJobID</Name>
+                    <Label>SendJobID</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>SendGroupID</CustomerKey>
+                    <Name>SendGroupID</Name>
+                    <Label>SendGroupID</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>SendPersonID</CustomerKey>
+                    <Name>SendPersonID</Name>
+                    <Label>SendPersonID</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>SubscriberID</CustomerKey>
+                    <Name>SubscriberID</Name>
+                    <Label>SubscriberID</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>SubscriberKey</CustomerKey>
+                    <Name>SubscriberKey</Name>
+                    <Label>SubscriberKey</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Text</FieldType>
+                    <MaxLength>254</MaxLength>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>SMSStandardStatusCodeId</CustomerKey>
+                    <Name>SMSStandardStatusCodeId</Name>
+                    <Label>SMSStandardStatusCodeId</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>Description</CustomerKey>
+                    <Name>Description</Name>
+                    <Label>Description</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Text</FieldType>
+                    <MaxLength>36</MaxLength>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>Name</CustomerKey>
+                    <Name>Name</Name>
+                    <Label>Name</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Text</FieldType>
+                    <MaxLength>36</MaxLength>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>ShortCode</CustomerKey>
+                    <Name>ShortCode</Name>
+                    <Label>ShortCode</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Number</FieldType>
+                </Field>
+                <Field xsi:type="DataExtensionField">
+                    <CustomerKey>SharedKeyword</CustomerKey>
+                    <Name>SharedKeyword</Name>
+                    <Label>SharedKeyword</Label>
+                    <IsRequired>false</IsRequired>
+                    <IsPrimaryKey>false</IsPrimaryKey>
+                    <FieldType>Text</FieldType>
+                    <MaxLength>36</MaxLength>
+                </Field>
+            </Fields>
+        </Objects>
+    </CreateRequest>
+</s:Body>
+</s:Envelope>
